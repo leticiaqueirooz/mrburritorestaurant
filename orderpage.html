@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <img src="mrburrito1.png" alt="logotipo" width="210" height="auto">
+        <h3> Welcome back! <span>&#x1f9e1;</span><br>
+            Order here, please <span>&#128071;&#127997;</span>
+        </h3>
+        <p> What would you like to order today? <span>&#127791;</span>
+        </p>
+        
+        <form action="#">
+
+        <table>
+        <tr>
+            <td><label for="menu">
+                Menu
+                </label>
+            </td>
+            <td><select id="burritoMenu" name="menu">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="Burrito Tradicional">Burrito Tradicional</option>
+                <option value="Burrito Vegan">Burrito Vegan</option>
+                <option value="Burrito Spice">Burrito Spice</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="quantity">
+            Quantity
+            </label>
+            </td>
+            <td>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>        
+            </td>
+        
+            </tr> 
+        <tr>
+            <td><label for="Size">
+            Size
+            </label>
+            </td>
+        <td><select name="burritosize" name="size" id="bsize" onchange="handleBurritoSize(this.value)" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="7">Large &euro;7</option>
+            <option value="9">Extra-Large &euro;9</option>
+            <option value="1750">Supersize &euro;17,50</option>
+            </select>
+          </td>
+          <tr>
+            <td><label for="discont">Discount code</label>
+            </td>
+            <td><input title="Enter discount code" id="discountCode" placeholder="Enter code here..." name="discountCode" type="text" value="" maxlength="10">
+            </td>
+        </tr> 
+        
+        </tr> 
+        <tr>
+            <td><button id="confirm-button" onclick="onClickSubmit(event)" name="" size="10">Confirm discount</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="discont">
+                Get total: <span id="totalAmount"></span>
+                </label>
+            </td>
+            <td><input  type="text" name="discont" maxlength="10" />
+            </td>
+        </tr>
+        <tr>
+            <td><button id="send-button" onclick="myFunction()" >Send Order</button>
+            </td>
+        </tr>
+
+        
+
+    </div>
+</table>   
+</form>
+</body>
+</html>
